@@ -9,7 +9,7 @@ function Cards({cards, setCard}) {
   return (
     <div id="cards">
       {cards.map((card, index) => 
-        <div id={card} className='card-back' style={{marginLeft: `${index*10}px`}} onClick={() => setCard(card)}></div>
+        <div id={card} className='card-back' style={{marginLeft: `${index*8}px`}} onClick={() => setCard(card)}></div>
       )}
     </div>
   );
