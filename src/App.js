@@ -11,11 +11,12 @@ function App() {
   const [reading, setReading] = useState('');
 
 
+  console.log(process.env)
   const getReading = async() => {
-    // const reading = await getTarotReading(card, orientation)
-    // console.log(reading)
-    // setReading(reading);
-    setReading("a reading")
+    const reading = await getTarotReading(card, orientation)
+    console.log(reading)
+    setReading(reading);
+    // setReading("a reading")
   }
 
   const draw = (card) => {
