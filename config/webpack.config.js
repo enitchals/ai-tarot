@@ -1,5 +1,6 @@
 'use strict';
 
+const Dotenv = require('dotenv-webpack');
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
@@ -753,3 +754,4 @@ module.exports = function (webpackEnv) {
     performance: false,
   };
 };
+
