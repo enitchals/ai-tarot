@@ -1,5 +1,6 @@
-.App {
+body {
   text-align: center;
+  background-color: aliceblue
 }
 
 .App-logo {
@@ -35,4 +36,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#cards {
+  padding-top: 100px;
+}
+
+.card-back {
+  background-color: teal;
+  border: 2px solid lightseagreen;
+  border-radius: 10px;
+  width: 200px;
+  height: 300px;
+  position: absolute;
+}
+
+.card-back:hover {
+  background-color: lightseagreen;
+  top: 85px;
 }

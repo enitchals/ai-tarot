@@ -1,80 +1,18 @@
-export const cards = [
-  'the magician',
-  'the high priestess',
-  'the empress',
-  'the emperor',
-  'the hierophant',
-  'the lovers',
-  'the chariot',
-  'strength',
-  'the hermit',
-  'wheel of fortune',
-  'justice',
-  'the hanged man',
-  'death',
-  'temperance',
-  'the devil',
-  'the tower',
-  'the star',
-  'the moon',
-  'the sun',
-  'judgement',
-  'the world',
-  'the fool',
-  'one of swords',
-  'two of swords',
-  'three of swords',
-  'four of swords',
-  'five of swords',
-  'six of swords',
-  'seven of swords',
-  'eight of swords',
-  'nine of swords',
-  'ten of swords',
-  'page of swords',
-  'knight of swords',
-  'king of swords',
-  'queen of swords',
-  'one of cups',
-  'two of cups',
-  'three of cups',
-  'four of cups',
-  'five of cups',
-  'six of cups',
-  'seven of cups',
-  'eight of cups',
-  'nine of cups',
-  'ten of cups',
-  'page of cups',
-  'knight of cups',
-  'king of cups',
-  'queen of cups',
-  'one of pentacles',
-  'two of pentacles',
-  'three of pentacles',
-  'four of pentacles',
-  'five of pentacles',
-  'six of pentacles',
-  'seven of pentacles',
-  'eight of pentacles',
-  'nine of pentacles',
-  'ten of pentacles',
-  'page of pentacles',
-  'knight of pentacles',
-  'king of pentacles',
-  'queen of pentacles',
-  'one of wands',
-  'two of wands',
-  'three of wands',
-  'four of wands',
-  'five of wands',
-  'six of wands',
-  'seven of wands',
-  'eight of wands',
-  'nine of wands',
-  'ten of wands',
-  'page of wands',
-  'knight of wands',
-  'king of wands',
-  'queen of wands'
-]
+import { useState } from 'react';
+import {cards} from './card-data'
+import './App.css';
+import { getTarotReading } from './openai';
+
+
+function Cards({cards, setCard}) {
+  console.log(cards);
+  return (
+    <div id="cards">
+      {cards.map((card, index) => 
+        <div id={card} className='card-back' style={{marginLeft: `${index*10}px`}} onClick={() => setCard(card)}></div>
+      )}
+    </div>
+  );
+}
+
+export default Cards;

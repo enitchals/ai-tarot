@@ -9,8 +9,8 @@ const openai = new OpenAIApi(config)
 export const getTarotReading = async(card, position) => { 
   console.log(process.env)
   const reading = await openai.createCompletion({
-    model: "text-curie-001",
-    prompt: `Write a three sentence, second-person tarot reading for ${card} ${position === 1 ? 'reversed\n' : '\n'}`,
+    model: "text-davinci-003",
+    prompt: `Write a four sentence, second-person tarot reading for ${card} ${position === 1 ? 'reversed\n' : '\n'}. Don't include the name of the card.`,
     temperature: 0.99,
     max_tokens: 150,
     top_p: 1,
