@@ -20,4 +20,5 @@ body {
 .card-back:hover {
   background-color: lightseagreen;
   top: 85px;
+  cursor: pointer;
 }
