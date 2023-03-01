@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ai-tarot/static/css/main.706b857b.css",
+    "main.js": "/ai-tarot/static/js/main.81796ced.js",
+    "static/js/787.667c5828.chunk.js": "/ai-tarot/static/js/787.667c5828.chunk.js",
+    "index.html": "/ai-tarot/index.html",
+    "main.706b857b.css.map": "/ai-tarot/static/css/main.706b857b.css.map",
+    "main.81796ced.js.map": "/ai-tarot/static/js/main.81796ced.js.map",
+    "787.667c5828.chunk.js.map": "/ai-tarot/static/js/787.667c5828.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.706b857b.css",
+    "static/js/main.81796ced.js"
+  ]
+}
