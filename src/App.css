@@ -1,48 +1,151 @@
 body {
   text-align: center;
-  background-color: aliceblue
+  background-color: lightblue;
+  height: 1000px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 #cards {
-  margin-top: 100px;
-  margin-left: 50px;
+  height: 400px;
+  width: 616px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid teal;
+  border-radius: 10px;
+  padding: 40px 60px;
+  background-color: aliceblue;
+}
+
+.tai-title {
+  color: teal;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.tai-text {
+  color: teal;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.ai-disclaimer {
+  color: teal;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 12px
 }
 
 .card-back {
-  background-color: teal;
+  background: teal;
   border: 2px solid lightseagreen;
   border-radius: 10px;
-  width: 200px;
-  height: 300px;
-  position: absolute;
+  width: 150px;
+  height: 225px;
+  position: relative;
 }
 
 .card-back:hover {
   background-color: lightseagreen;
-  top: 85px;
+  top: -10px;
   cursor: pointer;
 }
 
-@keyframes spinner {
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid lightblue;
+  border-bottom-color: teal;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotate 1s linear infinite;
+}
+
+#reading {
+  width: 50%;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid teal;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.reading-card{
+  color: teal;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 33px;
+  font-weight: bold;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+.reading-text {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.reading-more-info {
+  margin-top: 15px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+.reading-link {
+  color: teal;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.reading-link:hover {
+  text-decoration: underline;
+}
+
+.spinner-wrapper {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.loading-text {
+  color: teal;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 30px;
+  font-weight: bold;
+  animation: fade 2s linear infinite;
+}
+
+@keyframes rotate {
   0% {
-    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+      transform: rotate(0deg);
   }
   100% {
-    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+      transform: rotate(360deg);
   }
 }
-.spin::before {
-  animation: 1.5s linear infinite spinner;
-  animation-play-state: inherit;
-  border: solid 5px #cfd0d1;
-  border-bottom-color: #1c87c9;
-  border-radius: 50%;
-  content: "";
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  transform: translate3d(-50%, -50%, 0);
-  will-change: transform;
+
+@keyframes fade {
+  0% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .5;
+  }
 }
