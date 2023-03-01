@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {cards} from './card-data'
 import './App.css';
 import Cards from './Cards'
+import Reading from './Reading'
 import { getTarotReading } from './openai';
 
 
@@ -11,7 +12,6 @@ function App() {
   const [reading, setReading] = useState('');
 
 
-  console.log(process.env)
   const getReading = async() => {
     const reading = await getTarotReading(card, orientation)
     console.log(reading)
@@ -35,12 +35,10 @@ function App() {
     return array;
   }
 
-  console.log(process.env)
-
   return (
     <div className="App">
-      {reading !== ''
-        ? <div>{reading}</div>
+      {card !== ''
+        ? <div><Reading reading={reading}/></div>
         : <Cards cards={shuffledCards()} setCard={draw}/>
       }
     </div>
