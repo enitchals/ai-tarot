@@ -1,15 +1,13 @@
-import { useState } from 'react';
-import {cards} from './card-data'
 import './App.css';
-import { getTarotReading } from './openai';
-
 
 function Cards({cards, setCard}) {
   console.log(cards);
   return (
     <div id="cards">
+      <div className='tai-title'>T.A.I. (Tarot AI)</div>
+      <div className='tai-text'>Choose a card and Tarot AI will tell your fortune . . .</div>
       {cards.map((card, index) => 
-        <div id={card} className='card-back' style={{marginLeft: `${index*8}px`}} onClick={() => setCard(card)}></div>
+        <div id={card.name} className='card-back' style={{transform: `translate(${index*6}px, -${index*229}px)`}} onClick={() => setCard(card)}></div>
       )}
     </div>
   );
